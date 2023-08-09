@@ -1,0 +1,21 @@
+services:
+  ngx:
+    container_name: ngx
+    image: nginx:stable-alpine-slim
+    restart: always
+    environment:
+      # - NGINX_HOST=foobar.com
+      # - NGINX_PORT=80
+    networks:
+    ports:
+      - '8080:80'
+    volumes:
+      # - ./bind/var-lib-nginx:/var/lib/nginx
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      # - ./templates:/etc/nginx/templates
+# networks:
+#   net_ngx:
+#     external: true
+# volumes:
+#   vol_ngx_data:
+#     external: true
