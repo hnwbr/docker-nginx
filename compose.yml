@@ -12,8 +12,9 @@ services:
       # - ./nginx.conf:/etc/nginx/nginx.conf:ro
       # - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
       - ./nginx.conf:/etc/nginx/conf.d/default.conf
-      - vol_nginx_data:/var/lib/nginx
+      - var-lib-nginx:/var/lib/nginx
       # - ./bind/var-lib-nginx:/var/lib/nginx
+      # -  etc-nginx-templates:/etc/nginx/templates
       # - ./bind/etc-nginx-templates:/etc/nginx/templates
 
 networks:
@@ -21,5 +22,7 @@ networks:
     external: true
 
 volumes:
-  vol_nginx_data:
+  var-lib-nginx:
+    external: true
+  etc-nginx-templates:
     external: true

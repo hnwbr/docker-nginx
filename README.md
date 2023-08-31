@@ -1,7 +1,8 @@
 # docker-nginx
 
 sudo docker network create net_nginx && \
-sudo docker volume create vol_nginx_data
+sudo docker volume create var-lib-nginx && \
+sudo docker volume create etc-nginx-templates
 
 https://hub.docker.com/r/certbot/dns-cloudflare
 
