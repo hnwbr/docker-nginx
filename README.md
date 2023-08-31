@@ -1,5 +1,8 @@
 # docker-nginx
 
+sudo docker network create net_nginx && \
+sudo docker volume create vol_nginx_data
+
 https://hub.docker.com/r/certbot/dns-cloudflare
 
 https://mindsers.blog/post/https-using-nginx-certbot-docker/
