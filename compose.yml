@@ -16,6 +16,7 @@ services:
       # - ./bind/var-lib-nginx:/var/lib/nginx
       # -  etc-nginx-templates:/etc/nginx/templates
       # - ./bind/etc-nginx-templates:/etc/nginx/templates
+      # - ./nginx-html:/usr/share/nginx/html
 
 networks:
   net_nginx:
