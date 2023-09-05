@@ -17,6 +17,16 @@ services:
       # -  etc-nginx-templates:/etc/nginx/templates
       # - ./bind/etc-nginx-templates:/etc/nginx/templates
       # - ./nginx-html:/usr/share/nginx/html
+      - ssl:/etc/nginx/ssl
+      - var-www-certbot:/var/www/certbot:ro
+
+  certbot:
+    container_name: certbot
+    image: certbot/certbot
+    volumes:
+      - etc-letsencrypt:/etc/letsencrypt
+      - var-lib-letsencrypt:/var/lib/letsencrypt
+      - var-log-letsencrypt:/var/log/letsencrypt
 
 networks:
   net_nginx:
@@ -27,3 +37,6 @@ volumes:
     external: true
   etc-nginx-templates:
     external: true
+etc-letsencrypt
+var-lib-letsencrypt
+var-log-letsencrypt
