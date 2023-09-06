@@ -1,6 +1,6 @@
 # docker-nginx
 
-sudo docker network create net_nginx && \
+sudo docker network create nginx && \
 sudo docker volume create var-lib-nginx && \
 sudo docker volume create etc-nginx-templates
 
