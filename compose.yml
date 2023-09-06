@@ -34,11 +34,11 @@ networks:
 
 volumes:
   var-lib-nginx:
-  etc-nginx-templates:
+    external: true
+  # etc-nginx-templates:
+  # ssl:
+  # var-www-certbot:
 
-  ssl:
-  var-www-certbot:
-
-  etc-letsencrypt:
-  var-lib-letsencrypt:
-  var-log-letsencrypt:
+  # etc-letsencrypt:
+  # var-lib-letsencrypt:
+  # var-log-letsencrypt:
