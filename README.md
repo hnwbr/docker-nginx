@@ -4,9 +4,17 @@ sudo docker network create nginx && \
 sudo docker volume create var-lib-nginx && \
 sudo docker volume create etc-nginx-templates
 
-<!-- sudo crontab -e -->
-<!-- 0 */12 * * * docker-compose -f /path/to/docker-compose.yaml run certbot renew --quiet && docker-compose -f /path/to/docker-compose.yaml kill -s SIGHUP nginx -->
-<!-- docker-compose run certbot certonly --dns-dnsprovider --dns-dnsprovider-credentials /path/to/credentials.ini -d example.com -->
+```bash
+
+docker compose run --rm certbot certonly --webroot --webroot-path /var/www/certbot/ --dry-run -d example.org
+
+sudo crontab -e
+
+0 */12 * * * docker-compose -f /path/to/docker-compose.yaml run certbot renew --quiet && docker-compose -f /path/to/docker-compose.yaml kill -s SIGHUP nginx
+
+docker-compose run certbot certonly --dns-dnsprovider --dns-dnsprovider-credentials /path/to/credentials.ini -d example.com
+
+```
 
 https://hub.docker.com/r/certbot/dns-cloudflare
 

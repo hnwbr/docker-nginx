@@ -24,6 +24,7 @@ services:
     container_name: certbot
     image: certbot/certbot
     volumes:
+      - var-www-certbot:/var/www/certbot/:rw
       - etc-letsencrypt:/etc/letsencrypt
       - var-lib-letsencrypt:/var/lib/letsencrypt
       - var-log-letsencrypt:/var/log/letsencrypt
@@ -34,7 +35,6 @@ networks:
 
 volumes:
   var-lib-nginx:
-    # external: true
   etc-nginx-templates:
   ssl:
   var-www-certbot:
