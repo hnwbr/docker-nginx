@@ -17,21 +17,16 @@ docker-compose run certbot certonly --dns-dnsprovider --dns-dnsprovider-credenti
 ```
 
 https://hub.docker.com/r/certbot/dns-cloudflare
-
 https://eff-certbot.readthedocs.io/en/stable/install.html#running-with-docker
 
-https://mindsers.blog/post/https-using-nginx-certbot-docker/
-
-https://www.digitalocean.com/community/tutorials/how-to-run-nginx-in-a-docker-container-on-ubuntu-22-04
-
-https://www.digitalocean.com/community/tutorials/how-to-secure-a-containerized-node-js-application-with-nginx-let-s-encrypt-and-docker-compose
-
-https://stackify.com/how-to-configure-https-for-an-nginx-docker-container/
-
-https://www.programonaut.com/setup-ssl-with-docker-nginx-and-lets-encrypt/
-
+https://github.com/GoogleCloudPlatform/community/blob/master/archived/nginx-reverse-proxy-docker.md
 https://github.com/eugene-khyst/letsencrypt-docker-compose
+https://github.com/bringnow/docker-nginx-letsencrypt
 
+https://mindsers.blog/post/https-using-nginx-certbot-docker/
+https://www.digitalocean.com/community/tutorials/how-to-secure-a-containerized-node-js-application-with-nginx-let-s-encrypt-and-docker-compose
+https://stackify.com/how-to-configure-https-for-an-nginx-docker-container/
+https://www.programonaut.com/setup-ssl-with-docker-nginx-and-lets-encrypt/
 https://mpolinowski.github.io/docs/DevOps/NGINX/2020-08-28--nginx-docker-certbot/2020-08-27/
 https://medium.com/rahasak/setup-lets-encrypt-certificate-with-nginx-certbot-and-docker-b13010a12994
 https://gilyes.com/docker-nginx-letsencrypt/

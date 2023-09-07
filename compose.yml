@@ -3,8 +3,9 @@ services:
     container_name: nginx
     image: nginx:stable-alpine-slim
     restart: always
-    networks:
-      - nginx
+    network_mode: host
+    # networks:
+    #   - nginx
     ports:
       - 80:80
       - 443:443
@@ -38,7 +39,6 @@ volumes:
   etc-nginx-templates:
   ssl:
   var-www-certbot:
-
   etc-letsencrypt:
   var-lib-letsencrypt:
   var-log-letsencrypt:
